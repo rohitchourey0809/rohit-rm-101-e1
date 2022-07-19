@@ -1,3 +1,5 @@
 .task {
-  /* Sample  */
+  display: flex;
+  flex: nowrap;
+  justify-content: space-between;
 }
