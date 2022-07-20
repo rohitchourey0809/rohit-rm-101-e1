@@ -10,7 +10,9 @@ const Task = (props) => {
   const DeleteItem = (deleteid) => {
     console.log(deleteid, "deleteid");
     axios
-      .delete(`http://localhost:8080/Todo/${deleteid}`)
+      .delete(
+        `https://json-server-mocker-masai.herokuapp.com/tasks/${deleteid}`
+      )
       .then((response) => {
         console.log(response);
       })
@@ -22,7 +24,7 @@ const Task = (props) => {
     <>
       <li data-testid="task" className={styles.task}>
         <input type="checkbox" data-testid="task-checkbox" />
-        <div data-testid="task-text">{props.text}</div>
+        <div data-testid="task-text">{props.TASK}</div>
         {/* Counter here */}
         <Counter />
         <button

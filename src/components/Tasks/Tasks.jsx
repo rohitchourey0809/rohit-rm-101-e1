@@ -9,7 +9,7 @@ const Tasks = () => {
   const [Data, setData] = useState([]);
   useEffect(() => {
     axios
-      .get("http://localhost:8080/Todo")
+      .get("https://json-server-mocker-masai.herokuapp.com/tasks")
       .then((response) => {
         setData(response.data);
         // console.log(response);

@@ -10,7 +10,7 @@ const AddTask = () => {
 
   const AddItem = () => {
     axios
-      .post("http://localhost:8080/Added", {
+      .post("https://json-server-mocker-masai.herokuapp.com/tasks", {
         TASK: task,
       })
       .then((response) => {
